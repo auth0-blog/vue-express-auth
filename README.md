@@ -54,7 +54,9 @@ Name it "Vue Events" (or anything you'd like), click on "Single Page Web Applica
 Now click into "Settings" and fill in some information that Auth0 needs to configure authentication:
 
 **Allowed Callback URLs** &mdash; `http://localhost:8080`
+
 **Allowed Logout URLs** &mdash; `http://localhost:8080`
+
 **Allowed Web Origins** &mdash; `http://localhost:8080`
 
 ### Create the Auth0 API
