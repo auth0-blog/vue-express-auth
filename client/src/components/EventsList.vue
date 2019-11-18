@@ -25,13 +25,18 @@ export default {
     };
   },
   created() {
-    // NEW - Use the eventService to call the getEvents() method
-    EventService.getEvents()
-    .then(
-      (events => {
-        this.$set(this, "events", events);
-      }).bind(this)
-    );
+    this.getEventsData(); // call getEventData() when the instance is created
+  },
+  methods: {
+    async getEventsData() {
+      // Use the eventService to call the getEvents() method
+      EventService.getEvents()
+      .then(
+        (events => {
+          this.$set(this, "events", events);
+        }).bind(this)
+      );
+    }
   }
 };
 </script>
