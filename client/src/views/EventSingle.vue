@@ -35,12 +35,12 @@
   </div>
 </template>
 <script>
-// NEW - import EventService
+// import EventService
 import EventService from '@/services/EventService.js';
 export default {
   name: 'EventSingle',
   data() {
-    // NEW - initialize the event object
+    // initialize the event object
     return {
       event: {}
     }
