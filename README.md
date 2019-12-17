@@ -28,8 +28,9 @@ Server is running at [http://localhost:8000](http://localhost:8000).
 
 ### Set up the Vue client
 
+In a new terminal tab:
+
 ```bash
-git clone https://github.com/hollylawly/vue-express-auth.git
 cd client
 npm install
 npm run serve
