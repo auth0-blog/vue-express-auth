@@ -2,7 +2,7 @@
 
 This is an example of how you can make secure API calls to an Express API from a Vue client. It uses Auth0 to secure the Express API and also to allow users to register and login to the Vue application.
 
-You can clone this project and follow the directions below or [check out the tutorial]() where I cover everything step by step!
+You can clone this project and follow the directions below or [check out the tutorial](https://auth0.com/blog/how-to-make-secure-http-requests-with-vue-and-express/) where I cover everything step by step!
 
 ![Vue events app](https://cdn.auth0.com/blog/vue-meetup/vue-event-app-home.png)
 
