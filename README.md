@@ -31,7 +31,7 @@ Server is running at [http://localhost:8000](http://localhost:8000).
 In a new terminal tab:
 
 ```bash
-cd client
+cd ../client
 npm install
 npm run serve
 ```
