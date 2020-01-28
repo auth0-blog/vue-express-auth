@@ -66,7 +66,7 @@ Next, click on "APIs" on the left menu. Click "Create API" and call it "Vue Expr
 
 That's all we need from the dashboard for now, but don't click out yet. We'll need to pull some of these values from the dashboard into our application soon.
 
-Create a file (and add to `.gitignore`) for the config values:
+In the `client` directory, create a file (and add to `.gitignore`) for the config values:
 
 ```bash
 touch auth_config.json
