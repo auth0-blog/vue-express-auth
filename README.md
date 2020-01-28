@@ -86,8 +86,8 @@ Now open up `auth_config.json` and paste in:
 
 * Head to the [Auth0 dashboard](https://manage.auth0.com/dashboard)
 * Click on "APIs" and select your API
-* Copy the value for "Identifier" and past it into `audience` in `auth_config.json`
-* Click on "Applications" and select your application
+* Copy the value for "Identifier" and paste it into `audience` in `auth_config.json`
+* Click on "Applications" and select your application (Vue Events)
 * Click on "Settings"
 * Copy the value for "Domain" and paste it into `domain` in `auth_config.json`
 * Copy the value for "Client ID" and paste it into `clientId` in `auth_config.json`
@@ -107,4 +107,4 @@ Replace the `domain` and `audience` placeholders with the values listed above.
 
 Now you can sign in, receive an API access token, and view an event's details page at [http://localhost:8080/event/1](http://localhost:8080/event/1).
 
-Be sure to [check out the full tutorial]() to see how this process works.
+Be sure to [check out the full tutorial](https://auth0.com/blog/how-to-make-secure-http-requests-with-vue-and-express/) to see how this process works.
