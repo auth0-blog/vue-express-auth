@@ -37,7 +37,14 @@ npm install
 npm run serve
 ```
 
-View it in the browser at [http://localhost:8080](http://localhost:8080).
+At this point, you should see this error:
+
+```
+This relative module was not found:
+* ../auth_config.json in ./src/main.js
+```
+
+We'll be fixing that in the next section, so just ignore it for now.
 
 ## Configuring Auth0
 
@@ -106,6 +113,8 @@ const authConfig = {
 
 Replace the `domain` and `audience` placeholders with the values listed above.
 
-Now you can sign in, receive an API access token, and view an event's details page at [http://localhost:8080/event/1](http://localhost:8080/event/1).
+The error should now be resolved, so go ahead and open it up in the browser at [http://localhost:8080](http://localhost:8080).
+ 
+You can now also sign in, receive an API access token, and view an event's details page at [http://localhost:8080/event/1](http://localhost:8080/event/1).
 
 Be sure to [check out the full tutorial](https://auth0.com/blog/how-to-make-secure-http-requests-with-vue-and-express/) to see how this process works.
