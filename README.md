@@ -8,10 +8,11 @@ You can clone this project and follow the directions below or [check out the tut
 
 ## Project setup
 
-First, clone this repo:
+First, clone this repo and switch into the repo folder:
 
 ```bash
-git clone https://github.com/hollylawly/vue-express-auth.git
+git clone git@github.com:auth0-blog/vue-express-auth.git
+cd vue-express-auth
 ```
 
 Now you need to install the dependencies for the client and server code and get everything running. It won't run properly until you fill in the Auth0 values, but you can still start everything up now.
