@@ -15,17 +15,14 @@ git clone git@github.com:auth0-blog/vue-express-auth.git
 cd vue-express-auth
 ```
 
-Now you need to install the dependencies for the client and server code and get everything running. It won't run properly until you fill in the Auth0 values, but you can still start everything up now.
+Now you need to install the dependencies for the client and server code.
 
 ### Set up the Express server
 
 ```bash
 cd server
 npm install
-npm start
 ```
-
-Server is running at [http://localhost:8000](http://localhost:8000).
 
 ### Set up the Vue client
 
@@ -34,21 +31,11 @@ In a new terminal tab:
 ```bash
 cd ../client
 npm install
-npm run serve
 ```
-
-At this point, you should see this error:
-
-```
-This relative module was not found:
-* ../auth_config.json in ./src/main.js
-```
-
-We'll be fixing that in the next section, so just ignore it for now.
 
 ## Configuring Auth0
 
-We're going to use Auth0 to add authentication to the app.
+You're going to use Auth0 to add authentication to the app.
 
 First, [sign up for a free Auth0 account](https://auth0.com/signup). Once you're registered, you'll be taken to the [Auth0 management dashboard](https://manage.auth0.com/dashboard/).
 
@@ -68,17 +55,23 @@ Now click into "Settings" and fill in some information that Auth0 needs to confi
 
 **Allowed Web Origins** &mdash; `http://localhost:8080`
 
+Scroll down and click "Save Changes".
+
 ### Create the Auth0 API
 
 Next, click on "APIs" on the left menu. Click "Create API" and call it "Vue Express API" (or anything you'd like). For "Identifier", we recommend a URL such as `https://vue-express-api.com`. It doesn't have to be a publicly available URL and we'll never call it, it's just for naming purposes. You can leave "Signing algorithm" as is and then press "Create".
 
-That's all we need from the dashboard for now, but don't click out yet. We'll need to pull some of these values from the dashboard into our application soon.
+That's all you need from the dashboard for now, but don't click out yet. You'll need to pull some of these values from the dashboard into your application soon.
 
-In the `client` directory, create a file (and add to `.gitignore`) for the config values:
+In the `client` directory, create a file for the config values:
 
 ```bash
 touch auth_config.json
 ```
+
+> **Important:** Make sure you add `auth_config.json` to your `.gitignore` file!
+
+### Connecting with Auth0
 
 Now open up `auth_config.json` and paste in:
 
@@ -113,7 +106,29 @@ const authConfig = {
 
 Replace the `domain` and `audience` placeholders with the values listed above.
 
-The error should now be resolved, so go ahead and open it up in the browser at [http://localhost:8080](http://localhost:8080).
+### Testing the app
+
+Now that everything is set up, you can test the app.
+
+**Run the server**
+
+Make sure you're in the `server` directory in your terminal and start the server with:
+
+```bash
+npm start
+```
+
+Server is running at [http://localhost:8000](http://localhost:8000).
+
+**Run the client**
+
+In your other tab, make sure you're in `client` and run:
+
+```bash
+npm run serve
+```
+
+You can view the Vue app in the browser at [http://localhost:8080](http://localhost:8080).
  
 You can now also sign in, receive an API access token, and view an event's details page at [http://localhost:8080/event/1](http://localhost:8080/event/1).
 
