@@ -30,7 +30,7 @@ const checkJwt = jwt({
   // Validate the audience (Identifier) and the issuer (Domain).
   audience: authConfig.audience,
   issuer: `https://${authConfig.domain}/`,
-  algorithm: ["RS256"]
+  algorithms: ["RS256"]
 });
 
 // mock data to send to our frontend
